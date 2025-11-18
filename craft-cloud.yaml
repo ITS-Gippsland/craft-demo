@@ -1,0 +1,26 @@
+# Craft Cloud deployment configuration
+
+php: "8.2"
+node: "18"
+composer_version: "2"
+
+webroot: "web"
+
+build:
+  - composer install --no-dev --optimize-autoloader
+  - php craft setup/app-id
+  - php craft project-config/apply --force
+
+runtime:
+  queue: true
+  cache: true
+  sessions: true
+
+database:
+  engine: mysql
+  version: "8.0"
+
+storage:
+  assets: true
+  backups: true
+  logs: true
