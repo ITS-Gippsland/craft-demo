@@ -1,5 +1,3 @@
-# Craft Cloud deployment configuration
-
 php: "8.2"
 node: "18"
 composer_version: "2"
@@ -11,14 +9,14 @@ build:
   - php craft setup/app-id
   - php craft project-config/apply --force
 
+database:
+  engine: mysql
+  version: "8.0"
+
 runtime:
   queue: true
   cache: true
   sessions: true
-
-database:
-  engine: mysql
-  version: "8.0"
 
 storage:
   assets: true
