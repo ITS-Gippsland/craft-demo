@@ -24,6 +24,7 @@ return GeneralConfig::create()
     // Set the @webroot alias so the clear-caches command knows where to find CP resources
     ->securityKey('pOrBXxqV+y7KtEt1pDTfvELDhPNkkh/akr1H0MEEjbA=')
     ->aliases([
+        '@web' => App::env('https://craft-demo-production-facf5d9c.preview.craft.cloud/'), 
         '@webroot' => dirname(__DIR__) . '/web',
     ])
 ;
