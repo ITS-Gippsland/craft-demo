@@ -22,7 +22,7 @@ return GeneralConfig::create()
     // Prevent user enumeration attacks
     ->preventUserEnumeration()
     // Set the @webroot alias so the clear-caches command knows where to find CP resources
-    ->securityKey(pOrBXxqV+y7KtEt1pDTfvELDhPNkkh/akr1H0MEEjbA=)
+    ->securityKey('pOrBXxqV+y7KtEt1pDTfvELDhPNkkh/akr1H0MEEjbA=')
     ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',
     ])
