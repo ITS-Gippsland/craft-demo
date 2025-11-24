@@ -1,35 +1,27 @@
-php: "8.2"
-node: "18"
-composer_version: "2"
-
-webroot: "web"
-
+php: 8.2
+node: 18
+composer_version: 2
+webroot: web
 build:
   - composer install --no-dev --optimize-autoloader
   - php craft setup/app-id
   - php craft project-config/apply --force
-
 database:
   engine: mysql
-  version: "8.0"
-
+  version: 8.0
 runtime:
   queue: true
   cache: true
   sessions: true
-
 storage:
   assets: true
   backups: true
   logs: true
-
 deploy:
   clear_caches: true
-
 cron:
   - schedule: "0 * * * *"
     command: php craft queue/run
-
 routes:
   - type: healthcheck
-    path: "/healthz"
+    path: /healthz
