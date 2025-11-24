@@ -1,6 +1,5 @@
 ---
 php-version: "8.2"
-node-version: "18"
 composer_version: 2
 webroot: web
 build:
